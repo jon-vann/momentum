@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Momentum Bilan de départ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Jost:wght@300;400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="mark">MOMENTVM</div>
+    <div class="mark-sub">MOMENTUM PERFORMANCE</div>
+    <div class="rule"></div>
+  </header>
+
+  <section class="hero">
+    <div class="eyebrow">Bienvenue chez Momentum Performance</div>
+    <h1>Ton bilan de départ</h1>
+    <p class="lead">5 minutes pour que je construise un programme fait pour toi. Réponds simplement, il n'y a pas de mauvaise réponse.</p>
+  </section>
+
+  <section class="block" style="padding-top:36px">
+  <form action="https://formsubmit.co/jonvan19844@gmail.com" method="POST">
+    <input type="hidden" name="_subject" value="🆕 Bilan Momentum – nouveau client">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="https://jon-vann.github.io/momentum/merci.html">
+    <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+
+    <h2>Toi</h2>
+    <div class="two">
+      <div class="field"><label for="prenom">Prénom <span class="req">*</span></label><input id="prenom" type="text" name="Prénom" required></div>
+      <div class="field"><label for="nom">Nom <span class="req">*</span></label><input id="nom" type="text" name="Nom" required></div>
+    </div>
+    <div class="two">
+      <div class="field"><label for="email">Email <span class="req">*</span></label><input id="email" type="email" name="email" required></div>
+      <div class="field"><label for="tel">WhatsApp <span class="req">*</span></label><input id="tel" type="tel" name="WhatsApp" placeholder="+594 6…" required></div>
+    </div>
+    <div class="two">
+      <div class="field"><label for="naissance">Date de naissance</label><input id="naissance" type="text" name="Date de naissance" placeholder="JJ/MM/AAAA"></div>
+      <div class="field"><label for="ville">Ville</label><input id="ville" type="text" name="Ville"></div>
+    </div>
+
+    <h2 style="margin-top:20px">Ton objectif</h2>
+    <fieldset class="field"><legend>Ce que tu veux en priorité <span class="req">*</span></legend>
+      <div class="choices"><label><input type="checkbox" name="Objectif" value="Perte de gras"> Perte de gras</label><label><input type="checkbox" name="Objectif" value="Remise en forme"> Remise en forme</label><label><input type="checkbox" name="Objectif" value="Prise de muscle"> Prise de muscle</label><label><input type="checkbox" name="Objectif" value="Haltérophilie / performance"> Haltérophilie / performance</label><label><input type="checkbox" name="Objectif" value="Mobilité / bien-être"> Mobilité / bien-être</label></div>
+    </fieldset>
+    <div class="field"><label for="detail">Dis-m'en plus</label><p class="hint">Ce que tu veux changer, et pourquoi maintenant.</p><textarea id="detail" name="Objectif en détail"></textarea></div>
+
+    <h2 style="margin-top:20px">Ton niveau</h2>
+    <fieldset class="field"><legend>Ton niveau en musculation <span class="req">*</span></legend>
+      <div class="choices"><label><input type="radio" name="Niveau" value="Débutant" required> Débutant</label><label><input type="radio" name="Niveau" value="Intermédiaire" required> Intermédiaire</label><label><input type="radio" name="Niveau" value="Avancé" required> Avancé</label></div>
+    </fieldset>
+    <div class="field"><label for="exp">Ton parcours sportif</label><p class="hint">Sports pratiqués, depuis combien de temps, ce que tu fais en ce moment.</p><textarea id="exp" name="Parcours sportif"></textarea></div>
+
+    <h2 style="margin-top:20px">Ton organisation</h2>
+    <div class="two">
+      <div class="field"><label for="seances">Séances par semaine <span class="req">*</span></label>
+        <select id="seances" name="Séances par semaine" required><option value="">Choisis</option><option>2</option><option>3</option><option>4</option><option>5 ou plus</option></select></div>
+      <div class="field"><label for="dispos">Tes créneaux</label><input id="dispos" type="text" name="Disponibilités" placeholder="ex. midi en semaine, samedi matin"></div>
+    </div>
+    <fieldset class="field"><legend>Où tu t'entraînes <span class="req">*</span></legend>
+      <div class="choices"><label><input type="checkbox" name="Lieu" value="Salle"> Salle</label><label><input type="checkbox" name="Lieu" value="Maison"> Maison</label><label><input type="checkbox" name="Lieu" value="Extérieur"> Extérieur</label></div>
+    </fieldset>
+    <div class="field"><label for="materiel">Ton matériel</label><p class="hint">Si tu t'entraînes hors salle : haltères, élastiques, barre, rien…</p><input id="materiel" type="text" name="Matériel"></div>
+
+    <h2 style="margin-top:20px">Ta santé</h2>
+    <div class="field"><label for="blessures">Blessures, douleurs ou contraintes</label><p class="hint">Genou, dos, épaules, opération récente, avis médical… Écris « aucune » sinon.</p><textarea id="blessures" name="Blessures et contraintes"></textarea></div>
+    <div class="two">
+      <div class="field"><label for="sommeil">Sommeil (heures par nuit)</label><input id="sommeil" type="text" name="Sommeil"></div>
+      <div class="field"><label for="pas">Pas par jour (environ)</label><input id="pas" type="text" name="Pas par jour" placeholder="si tu le sais"></div>
+    </div>
+    <div class="field"><label for="alim">Ton alimentation en bref</label><p class="hint">Combien de repas, ce que tu manges en général, grignotage, boissons.</p><textarea id="alim" name="Alimentation"></textarea></div>
+
+    <h2 style="margin-top:20px">Pour finir</h2>
+    <fieldset class="field"><legend>Ta motivation aujourd'hui, de 1 à 10</legend>
+      <div class="choices"><label><input type="radio" name="Motivation" value="1"> 1</label><label><input type="radio" name="Motivation" value="2"> 2</label><label><input type="radio" name="Motivation" value="3"> 3</label><label><input type="radio" name="Motivation" value="4"> 4</label><label><input type="radio" name="Motivation" value="5"> 5</label><label><input type="radio" name="Motivation" value="6"> 6</label><label><input type="radio" name="Motivation" value="7"> 7</label><label><input type="radio" name="Motivation" value="8"> 8</label><label><input type="radio" name="Motivation" value="9"> 9</label><label><input type="radio" name="Motivation" value="10"> 10</label></div>
+    </fieldset>
+    <div class="field"><label for="frein">Ce qui t'a bloqué jusqu'ici</label><textarea id="frein" name="Ce qui a bloqué"></textarea></div>
+    <fieldset class="field"><legend>Photos de suivi</legend>
+      <div class="choices"><label><input type="checkbox" name="Accord photos" value="Oui"> J'accepte d'envoyer des photos de suivi (privées, jamais publiées)</label></div>
+    </fieldset>
+
+    <button class="btn primary" type="submit">Envoyer mon bilan</button>
+    <p class="privacy">Tes réponses sont envoyées uniquement à Jonathan pour construire ton programme. Elles ne sont jamais partagées.</p>
+  </form>
+  </section>
+  <footer>
+    <div class="rule"></div>
+    Momentum Performance · Coaching à distance · @momentum_perf
+  </footer>
+</div>
+</body>
+</html>
