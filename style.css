@@ -1,0 +1,55 @@
+
+/* Layout : une colonne étroite façon carte de membre ; bandeau noir, filets or, offre au centre */
+:root{
+  --bg:#0E0F11; --surface:#16171A; --line:#2A2924;
+  --ivory:#F5F1E8; --muted:#A9A396; --gold:#B8955A; --gold-soft:#D3B783;
+  --display:"Cinzel", "Trajan Pro", Georgia, serif;
+  --body:"Jost", "Futura", "Avenir Next", system-ui, sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ivory);font-family:var(--body);font-weight:300;font-size:16px;line-height:1.6;margin:0}
+.wrap{max-width:720px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+
+header{padding-block:44px 8px;text-align:center}
+.mark{font-family:var(--display);font-weight:700;letter-spacing:.5em;font-size:clamp(22px,6vw,30px);margin-right:-.5em}
+.mark-sub{font-family:var(--display);font-weight:500;letter-spacing:.42em;font-size:10px;color:var(--gold);margin-top:8px;margin-right:-.42em}
+.rule{height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:28px auto 0;width:min(320px,70%)}
+
+.hero{text-align:center;padding-block:32px 8px}
+.eyebrow{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);font-weight:400}
+h1{font-family:var(--display);font-weight:500;font-size:clamp(28px,7.4vw,46px);line-height:1.15;letter-spacing:.06em;margin:14px 0 16px;text-wrap:balance}
+.lead{color:var(--muted);font-size:17px;max-width:30em;margin:0 auto}
+
+.cta{display:flex;flex-direction:column;gap:10px;margin-top:26px}
+.btn{display:flex;align-items:center;justify-content:center;min-height:52px;padding:12px 18px;text-decoration:none;font-weight:500;letter-spacing:.12em;text-transform:uppercase;font-size:14px;border:1px solid var(--gold);transition:background .2s,color .2s}
+.btn.primary{background:var(--gold);color:var(--bg)}
+.btn.primary:hover{background:var(--gold-soft)}
+.btn.ghost{color:var(--ivory)}
+.btn.ghost:hover{background:rgba(184,149,90,.12)}
+
+h2{font-family:var(--display);font-weight:700;font-size:15px;letter-spacing:.24em;text-transform:uppercase;margin:0 0 20px;display:flex;align-items:center;gap:14px}
+h2::after{content:"";flex:1;height:1px;background:var(--line)}
+section.block{padding-block:52px 0}
+footer{text-align:center;padding-block:36px 40px;color:var(--muted);font-size:12px;letter-spacing:.2em;text-transform:uppercase}
+footer .rule{margin:0 auto 20px}
+@media (prefers-reduced-motion:reduce){.btn{transition:none}}
+
+form{display:grid;gap:22px;margin-top:8px}
+.field{display:grid;gap:8px;min-width:0}
+.field label,.field legend{font-weight:500;font-size:15px}
+.field .hint{color:var(--muted);font-size:13px;margin-top:-4px}
+input[type=text],input[type=email],input[type=tel],input[type=number],select,textarea{width:100%;background:var(--surface);color:var(--ivory);border:1px solid var(--line);padding:12px 14px;font:inherit;font-size:16px;border-radius:0}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--gold)}
+textarea{min-height:92px;resize:vertical}
+fieldset{border:0;padding:0;margin:0;display:grid;gap:10px;min-width:0}
+.choices{display:flex;flex-wrap:wrap;gap:8px}
+.choices label{display:flex;align-items:center;gap:8px;border:1px solid var(--line);padding:10px 14px;font-weight:300;font-size:15px;cursor:pointer}
+.choices input{accent-color:var(--gold)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.req{color:var(--gold)}
+button.btn{width:100%;cursor:pointer;font-family:inherit}
+.privacy{color:var(--muted);font-size:13px;text-align:center}
+@media (max-width:560px){.two{grid-template-columns:1fr}}
