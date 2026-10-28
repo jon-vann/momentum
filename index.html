@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Coaching sportif à distance en Guyane : perte de gras, remise en forme, haltérophilie. Offre de lancement à 79 € par mois, réservée aux 10 premiers clients.">
+<meta property="og:title" content="Momentum Performance · Coaching à distance">
+<meta property="og:description" content="Offre de lancement : 79 € / mois au lieu de 120 €. 10 places.">
+<title>Momentum Coaching à distance</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Jost:wght@300;400;500&display=swap">
+<style>
+/* Layout : une colonne étroite façon carte de membre ; bandeau noir, filets or, offre au centre */
+:root{
+  --bg:#0E0F11; --surface:#16171A; --line:#2A2924;
+  --ivory:#F5F1E8; --muted:#A9A396; --gold:#B8955A; --gold-soft:#D3B783;
+  --display:"Cinzel", "Trajan Pro", Georgia, serif;
+  --body:"Jost", "Futura", "Avenir Next", system-ui, sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ivory);font-family:var(--body);font-weight:300;font-size:16px;line-height:1.6;margin:0}
+.wrap{max-width:720px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+
+header{padding-block:44px 8px;text-align:center}
+.mark{font-family:var(--display);font-weight:700;letter-spacing:.5em;font-size:clamp(22px,6vw,30px);margin-right:-.5em}
+.mark-sub{font-family:var(--display);font-weight:500;letter-spacing:.42em;font-size:10px;color:var(--gold);margin-top:8px;margin-right:-.42em}
+.rule{height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:28px auto 0;width:min(320px,70%)}
+
+.hero{text-align:center;padding-block:32px 8px}
+.eyebrow{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);font-weight:400}
+h1{font-family:var(--display);font-weight:500;font-size:clamp(28px,7.4vw,46px);line-height:1.15;letter-spacing:.06em;margin:14px 0 16px;text-wrap:balance}
+.lead{color:var(--muted);font-size:17px;max-width:30em;margin:0 auto}
+
+.offer{margin:40px 0 0;border:1px solid var(--gold);padding:30px 26px 26px;position:relative;background:var(--surface)}
+.offer::before{content:"Offre de lancement";position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:var(--bg);padding:0 14px;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);white-space:nowrap}
+.price{display:flex;align-items:baseline;justify-content:center;gap:14px;flex-wrap:wrap}
+.price .now{font-family:var(--display);font-weight:700;font-size:clamp(52px,14vw,72px);line-height:1;color:var(--ivory)}
+.price .now small{font-size:.38em;font-weight:500;color:var(--gold-soft);margin-left:4px}
+.price .was{color:var(--muted);text-decoration:line-through;font-size:18px}
+.terms{display:flex;justify-content:center;flex-wrap:wrap;gap:8px 22px;margin:18px 0 0;padding:0;list-style:none;font-size:14px;color:var(--muted)}
+.terms li{display:flex;align-items:center;gap:8px}
+.terms li::before{content:"";width:5px;height:5px;background:var(--gold);transform:rotate(45deg)}
+.cta{display:flex;flex-direction:column;gap:10px;margin-top:26px}
+.btn{display:flex;align-items:center;justify-content:center;min-height:52px;padding:12px 18px;text-decoration:none;font-weight:500;letter-spacing:.12em;text-transform:uppercase;font-size:14px;border:1px solid var(--gold);transition:background .2s,color .2s}
+.btn.primary{background:var(--gold);color:var(--bg)}
+.btn.primary:hover{background:var(--gold-soft)}
+.btn.ghost{color:var(--ivory)}
+.btn.ghost:hover{background:rgba(184,149,90,.12)}
+.cta-note{text-align:center;font-size:13px;color:var(--muted);margin:4px 0 0}
+
+h2{font-family:var(--display);font-weight:700;font-size:15px;letter-spacing:.24em;text-transform:uppercase;margin:0 0 20px;display:flex;align-items:center;gap:14px}
+h2::after{content:"";flex:1;height:1px;background:var(--line)}
+section.block{padding-block:52px 0}
+
+.goals{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.goal{border-top:1px solid var(--gold);padding-top:14px;min-width:0}
+.goal b{display:block;font-weight:500;font-size:16px;margin-bottom:4px}
+.goal span{color:var(--muted);font-size:14px}
+
+.incl{display:grid;gap:0;margin:0;padding:0;list-style:none}
+.incl li{display:grid;grid-template-columns:120px 1fr;gap:16px;padding:16px 0;border-bottom:1px solid var(--line)}
+.incl li:first-child{border-top:1px solid var(--line)}
+.incl dt,.incl .k{font-family:var(--display);font-weight:500;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.incl .v{color:var(--ivory);min-width:0}
+.incl .v span{display:block;color:var(--muted);font-size:14px}
+
+.steps{counter-reset:s;display:grid;gap:18px;margin:0;padding:0;list-style:none}
+.steps li{counter-increment:s;display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:start}
+.steps li::before{content:counter(s,decimal-leading-zero);font-family:var(--display);font-weight:700;color:var(--gold);font-size:22px;line-height:1.2}
+.steps b{font-weight:500;display:block}
+.steps span{color:var(--muted);font-size:15px}
+.kw{font-family:var(--display);font-weight:700;letter-spacing:.14em;color:var(--gold-soft)}
+
+details{border-bottom:1px solid var(--line);padding:14px 0}
+details:first-of-type{border-top:1px solid var(--line)}
+summary{cursor:pointer;font-weight:500;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--gold);font-size:20px;line-height:1}
+details[open] summary::after{content:"–"}
+details p{color:var(--muted);margin:10px 0 0;font-size:15px}
+
+.final{text-align:center;padding-block:56px 20px}
+.final p{font-family:var(--display);font-size:clamp(20px,5vw,26px);letter-spacing:.06em;margin:0 0 22px;text-wrap:balance}
+.final .cta{max-width:420px;margin:0 auto}
+footer{text-align:center;padding-block:36px 40px;color:var(--muted);font-size:12px;letter-spacing:.2em;text-transform:uppercase}
+footer .rule{margin:0 auto 20px}
+
+@media (max-width:560px){
+  .goals{grid-template-columns:1fr}
+  .incl li{grid-template-columns:1fr;gap:4px}
+  .offer{padding:28px 18px 22px}
+}
+@media (prefers-reduced-motion:reduce){.btn{transition:none}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <div class="mark">MOMENTVM</div>
+    <div class="mark-sub">MOMENTUM PERFORMANCE</div>
+    <div class="rule"></div>
+  </header>
+
+  <section class="hero">
+    <div class="eyebrow">Coaching sportif à distance · Guyane</div>
+    <h1>Ton programme. Ton rythme. Un coach qui suit.</h1>
+    <p class="lead">Un entraînement construit pour toi, en salle ou à la maison, avec un suivi chaque semaine pour garder le cap.</p>
+  </section>
+
+  <section class="offer" aria-label="Offre de lancement">
+    <div class="price"><span class="now">79&nbsp;€<small>/ mois</small></span><span class="was">120 € / mois</span></div>
+    <ul class="terms">
+      <li>Engagement 3 mois</li>
+      <li>Réservé aux 10 premiers clients</li>
+    </ul>
+    <div class="cta">
+      <a class="btn primary" href="https://buy.stripe.com/bJebJ1dsj1pb5iCbSk3ZK00" target="_blank" rel="noopener">Réserver ma place</a>
+      <a class="btn ghost" href="https://www.instagram.com/momentum_perf/" target="_blank" rel="noopener">Poser une question en DM</a>
+    </div>
+    <p class="cta-note">Paiement sécurisé par Stripe. Après ton inscription, je te contacte sur WhatsApp pour faire ton bilan.</p>
+  </section>
+
+  <section class="block">
+    <h2>Pour qui</h2>
+    <div class="goals">
+      <div class="goal"><b>Perte de gras</b><span>Perdre du gras durablement, sans régime extrême.</span></div>
+      <div class="goal"><b>Remise en forme</b><span>Reprendre une routine qui tient dans ton emploi du temps.</span></div>
+      <div class="goal"><b>Haltérophilie</b><span>Progresser en technique et en charges, vidéo à l'appui.</span></div>
+    </div>
+  </section>
+
+  <section class="block">
+    <h2>Ce qui est inclus</h2>
+    <ul class="incl">
+      <li><span class="k">Le bilan</span><span class="v">Ton objectif, ton niveau, ton matériel, tes disponibilités.<span>Pas de programme sans te connaître.</span></span></li>
+      <li><span class="k">Le programme</span><span class="v">Construit pour toi, par blocs de 4 semaines.<span>En salle ou à la maison, avec le matériel que tu as.</span></span></li>
+      <li><span class="k">Le suivi</span><span class="v">Un point chaque semaine par message.<span>On regarde tes séances, tes vidéos, et on ajuste.</span></span></li>
+      <li><span class="k">Le bilan mensuel</span><span class="v">Photos, mesures, progression.<span>Un compte rendu clair, et les objectifs du mois suivant.</span></span></li>
+    </ul>
+  </section>
+
+  <section class="block">
+    <h2>Comment ça marche</h2>
+    <ol class="steps">
+      <li><div><b>Tu réserves ta place</b><span>En ligne, paiement sécurisé. Une question avant ? Écris <span class="kw">COACH</span> en DM sur Instagram.</span></div></li>
+      <li><div><b>On fait ton bilan</b><span>Quelques questions pour comprendre ton objectif et ton quotidien.</span></div></li>
+      <li><div><b>Tu reçois ton programme</b><span>Avec ta fiche d'accueil et tout ce qu'il faut pour démarrer.</span></div></li>
+      <li><div><b>On avance ensemble</b><span>Suivi chaque semaine, bilan toutes les 4 semaines.</span></div></li>
+    </ol>
+  </section>
+
+  <section class="block">
+    <h2>Questions fréquentes</h2>
+    <details><summary>Il me faut du matériel ?</summary><p>Non. Le programme s'adapte à ce que tu as : salle complète, quelques haltères à la maison, ou rien du tout.</p></details>
+    <details><summary>Je suis débutant, c'est pour moi ?</summary><p>Oui. Le bilan sert justement à partir de ton niveau réel, et les exercices sont expliqués.</p></details>
+    <details><summary>Comment se passe le suivi ?</summary><p>Par message, chaque semaine. Tu m'envoies tes retours et tes vidéos, je corrige et j'ajuste le programme.</p></details>
+    <details><summary>Que veut dire l'engagement de 3 mois ?</summary><p>L'offre de lancement à 79 € par mois s'entend pour 3 mois minimum : c'est le temps qu'il faut pour voir de vrais résultats.</p></details>
+    <details><summary>Je ne suis pas en Guyane, je peux m'inscrire ?</summary><p>Oui. Le coaching est entièrement à distance : tu peux t'entraîner où tu veux.</p></details>
+  </section>
+
+  <section class="final">
+    <p>Le plus dur, c'est le premier pas.</p>
+    <div class="cta">
+      <a class="btn primary" href="https://buy.stripe.com/bJebJ1dsj1pb5iCbSk3ZK00" target="_blank" rel="noopener">Réserver ma place</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="rule"></div>
+    Momentum Performance · Coaching à distance · @momentum_perf
+  </footer>
+</div>
+
+</body>
+</html>
