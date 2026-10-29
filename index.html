@@ -95,6 +95,18 @@ footer .rule{margin:0 auto 20px}
   .offer{padding:28px 18px 22px}
 }
 @media (prefers-reduced-motion:reduce){.btn{transition:none}}
+form{display:grid;gap:18px;margin-top:8px}
+.field{display:grid;gap:8px;min-width:0}
+.field label,.field legend{font-weight:500;font-size:15px}
+input[type=text],input[type=tel],select,textarea{width:100%;background:var(--surface);color:var(--ivory);border:1px solid var(--line);padding:12px 14px;font:inherit;font-size:16px;border-radius:0}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--gold)}
+textarea{min-height:80px;resize:vertical}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.req{color:var(--gold)}
+button.btn{width:100%;cursor:pointer;font-family:inherit}
+.privacy{color:var(--muted);font-size:13px;text-align:center}
+.lead-box{border:1px solid var(--line);background:var(--surface);padding:26px 22px}
+@media (max-width:560px){.two{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -161,6 +173,32 @@ footer .rule{margin:0 auto 20px}
     <details><summary>Comment se passe le suivi ?</summary><p>Par message, chaque semaine. Tu m'envoies tes retours et tes vidéos, je corrige et j'ajuste le programme.</p></details>
     <details><summary>Que veut dire l'engagement de 3 mois ?</summary><p>L'offre de lancement à 79 € par mois s'entend pour 3 mois minimum : c'est le temps qu'il faut pour voir de vrais résultats.</p></details>
     <details><summary>Je ne suis pas en Guyane, je peux m'inscrire ?</summary><p>Oui. Le coaching est entièrement à distance : tu peux t'entraîner où tu veux.</p></details>
+  </section>
+
+  <section class="block" id="infos">
+    <h2>Pas encore décidé ?</h2>
+    <div class="lead-box">
+    <p style="margin-top:0">Laisse-moi tes coordonnées : je te recontacte personnellement pour répondre à tes questions, sans engagement.</p>
+    <form action="https://formsubmit.co/05d08383090cf9cd5732a3a311790a12" method="POST">
+      <input type="hidden" name="_subject" value="🎯 Prospect Momentum – demande d'infos">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://jon-vann.github.io/momentum/merci-infos.html">
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+      <div class="two">
+        <div class="field"><label for="l-prenom">Prénom <span class="req">*</span></label><input id="l-prenom" type="text" name="Prénom" required></div>
+        <div class="field"><label for="l-wa">WhatsApp <span class="req">*</span></label><input id="l-wa" type="tel" name="WhatsApp" placeholder="+594 6…" required></div>
+      </div>
+      <div class="two">
+        <div class="field"><label for="l-insta">Ton Instagram</label><input id="l-insta" type="text" name="Instagram" placeholder="@…"></div>
+        <div class="field"><label for="l-obj">Ton objectif</label>
+          <select id="l-obj" name="Objectif"><option value="">Choisis</option><option>Perte de gras</option><option>Remise en forme</option><option>Prise de muscle</option><option>Haltérophilie / performance</option><option>Autre</option></select></div>
+      </div>
+      <div class="field"><label for="l-q">Ta question (facultatif)</label><textarea id="l-q" name="Question"></textarea></div>
+      <button class="btn primary" type="submit">Je veux en savoir plus</button>
+      <p class="privacy">Tes coordonnées servent uniquement à te recontacter. Jamais partagées.</p>
+    </form>
+    </div>
   </section>
 
   <section class="final">
