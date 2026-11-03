@@ -25,12 +25,10 @@
   </section>
 
   <section class="block" style="padding-top:36px">
-  <form action="https://formsubmit.co/05d08383090cf9cd5732a3a311790a12" method="POST">
+  <form action="https://formspree.io/f/xrpprbon" method="POST">
     <input type="hidden" name="_subject" value="📊 Suivi hebdo Momentum">
-    <input type="hidden" name="_template" value="table">
-    <input type="hidden" name="_captcha" value="false">
     <input type="hidden" name="_next" value="https://jon-vann.github.io/momentum/merci-suivi.html">
-    <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+    <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
 
     <div class="two">
       <div class="field"><label for="prenom">Prénom <span class="req">*</span></label><input id="prenom" type="text" name="Prénom" required></div>
@@ -76,11 +74,25 @@
   </footer>
 </div>
 <script>
-// Évite les envois en double : le bouton se bloque dès le premier clic.
+// Envoi du formulaire en arrière-plan (Formspree), puis page « merci ».
+// Le bouton se bloque au premier clic pour éviter les envois en double.
 document.querySelectorAll('form').forEach(function (f) {
-  f.addEventListener('submit', function () {
+  f.addEventListener('submit', function (e) {
+    e.preventDefault();
     var b = f.querySelector('button[type="submit"]');
+    var label = b ? b.textContent : '';
     if (b) { b.disabled = true; b.textContent = 'Envoi en cours…'; b.style.opacity = '0.6'; }
+    var data = new FormData(f);
+    var next = data.get('_next'); data.delete('_next');
+    fetch(f.action, { method: 'POST', body: data, headers: { 'Accept': 'application/json' } })
+      .then(function (r) {
+        if (!r.ok) throw new Error('envoi');
+        window.location.href = next || 'merci.html';
+      })
+      .catch(function () {
+        if (b) { b.disabled = false; b.textContent = label; b.style.opacity = '1'; }
+        alert("L'envoi n'a pas fonctionné. Vérifie ta connexion et réessaie dans un instant. Si ça bloque encore, écris-moi sur Instagram (@momentum_perf).");
+      });
   });
 });
 </script>
